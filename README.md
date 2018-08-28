@@ -56,3 +56,40 @@ Glide.with(this)
      .into(ivImage);
 
 ```
+
+取消加载图片
+
+```
+Glide.with(fragment).clear(imageView);
+
+```
+加载占位图
+
+加载过程中的占用(Placeholder)
+ 
+ ```
+Glide.with(fragment)
+ .load(url)
+ .placeholder(R.drawable.placeholder)
+ .into(view);
+ 
+ ```
+ 加载失败后显示的图片(Error)
+ 
+  ```
+ Glide.with(fragment)
+ .load(url)
+ .error(R.drawable.error)
+ .into(view);
+ 
+ ```
+ 
+ 加载圆形图片
+ 
+   ```
+ Glide.with(this)
+       .load(url)
+       .apply(RequestOptions.circleCropTransform())
+       .into(ivTest);
+	   
+```
